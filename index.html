@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi San Valentín</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <style>
+        #noBtn {
+            transition: all 0.5s ease;
+        }
+        #acceptBtn {
+            transition: all 0.5s ease;
+        }
+        .hidden-section {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-r from-pink-500 to-pink-900">
+
+    <div class="flex h-screen flex-col lg:flex-row">
+        <!-- Sidebar -->
+        <div class="lg:w-64 w-full bg-white p-5 lg:block hidden" data-aos="fade-right" data-aos-duration="1000">
+            <h2 class="text-2xl font-bold text-center text-pink-500">Para mi reina hermosa, mi amorcito bonita 💖</h2>
+            <ul class="mt-10 space-y-4">
+                <li><a href="#inicio" class="text-lg text-gray-700 hover:text-pink-500" onclick="showSection('inicio')">Inicio</a></li>
+                <li><a href="#sobre-mi" class="text-lg text-gray-700 hover:text-pink-500" onclick="showSection('sobre-mi')" id="sobreMiLink" style="pointer-events: none; opacity: 0.5;">Sobre mí</a></li>
+                <li><a href="#mensaje" class="text-lg text-gray-700 hover:text-pink-500" onclick="showSection('mensaje')" id="mensajeLink" style="pointer-events: none; opacity: 0.5;">Mensaje Especial</a></li>
+                <li><a href="#galeria" class="text-lg text-gray-700 hover:text-pink-500" onclick="showSection('galeria')" id="galeriaLink" style="pointer-events: none; opacity: 0.5;">Galería</a></li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1 p-5 lg:p-10">
+            <!-- Sección de Inicio -->
+            <section id="inicio" class="text-center" data-aos="fade-up" data-aos-duration="1500">
+                <h1 class="text-4xl font-extrabold text-white mb-5">¿Quieres ser mi San Valentín, mi amor?</h1>
+                <p class="text-xl text-white mb-5">De hecho ni deberia preguntar o quieres ser San Valentín del otro? 💖</p>
+                <div class="flex justify-center mb-5">
+                    <img class="rounded-full w-32 h-32 object-cover" src="images/ola.png" alt="Imagen de ola">
+                </div>
+                <button id="acceptBtn" class="bg-pink-500 text-white py-2 px-4 rounded-lg hover:bg-pink-700 transition duration-300">¡Obvio que sí, mi rey, mi cielo, mi vida, mi niño hermoso! 💖</button>
+                <button id="noBtn" class="bg-red-500 text-white py-2 px-4 mt-5 rounded-lg hover:bg-red-700 transition duration-300">No, me voy a ir con el otro porque tu eres horrendo</button>
+                <p id="noMessage" class="text-white mt-5"></p>
+            </section>
+
+            <!-- Sección Sobre mí -->
+            <section id="sobre-mi" class="mt-20 text-center hidden-section" data-aos="fade-up" data-aos-duration="1500">
+                <h2 class="text-3xl font-bold text-white mb-5">Sobre mí</h2>
+                <p class="text-xl text-white">Soy alguien que te quiere mucho y quiero que este San Valentín sea algo especial para nosotros. 💖</p>
+            </section>
+
+            <!-- Sección Mensaje Especial -->
+            <section id="mensaje" class="mt-20 text-center hidden-section" data-aos="fade-up" data-aos-duration="1500">
+                <h2 class="text-3xl font-bold text-white mb-5">Mensaje Especial</h2>
+                <p class="text-xl text-white">Este 14 de febrero quiero que lo celebremos juntos, compartiendo momentos increíbles. Te quiero mucho. 😘</p>
+            </section>
+
+            <!-- Sección Galería -->
+            <section id="galeria" class="mt-20 text-center hidden-section" data-aos="fade-up" data-aos-duration="1500">
+                <h2 class="text-3xl font-bold text-white mb-5">Galería</h2>
+                <!-- Galería de imágenes con animación y adaptabilidad según pantalla -->
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 mb-5">
+                    <img src="images/Diciembre pipipi.png" alt="Imagen 1" class="rounded-full w-32 h-32 object-cover transition-transform duration-300 ease-in-out hover:scale-110 mx-auto">
+                    <img src="images/MiAmorcitoBonita.png" alt="Imagen 2" class="rounded-full w-32 h-32 object-cover transition-transform duration-300 ease-in-out hover:scale-110 mx-auto">
+                    <img src="images/Miamorcitobonitahermosabella.png" alt="Imagen 3" class="rounded-full w-32 h-32 object-cover transition-transform duration-300 ease-in-out hover:scale-110 mx-auto">
+                    <img src="images/uwu.png" alt="Imagen 4" class="rounded-full w-32 h-32 object-cover transition-transform duration-300 ease-in-out hover:scale-110 mx-auto">
+                    <img src="images/WA.png" alt="Imagen 5" class="rounded-full w-32 h-32 object-cover transition-transform duration-300 ease-in-out hover:scale-110 mx-auto">
+                    <img src="images/Miamorcito.jpg" alt="Imagen 6" class="rounded-full w-32 h-32 object-cover transition-transform duration-300 ease-in-out hover:scale-110 mx-auto">
+                    <img src="images/MiAmorcito.png" alt="Imagen 7" class="rounded-full w-32 h-32 object-cover transition-transform duration-300 ease-in-out hover:scale-110 mx-auto">
+                    <img src="images/Miniñitabonita.jpg" alt="Imagen 8" class="rounded-full w-32 h-32 object-cover transition-transform duration-300 ease-in-out hover:scale-110 mx-auto">
+                    <img src="images/1709443755879.jpg" alt="Imagen 9" class="rounded-full w-32 h-32 object-cover transition-transform duration-300 ease-in-out hover:scale-110 mx-auto">
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
+
+        let acceptBtnSize = 1;
+
+        function moveNoButton() {
+            const messages = [
+                "Amor te quieres quedar sin novio?",
+                "Amor piensalo bien tienes tiempo todavia para decir que si mi vida no hagas esto mas dificil",
+                "De verdad me estas haciendo esto?",
+                "Ok esta bien respeto tu decision amor...",
+                "Ya sabia desde un principio que no me querias y quieres tener al otro para que sea tu san valentin 😔"
+            ];
+            const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+            document.getElementById('noMessage').innerText = randomMessage;
+
+            const randomX = Math.random() * 70;
+            const randomY = Math.random() * 50;
+            const noBtn = document.getElementById('noBtn');
+            noBtn.style.position = 'absolute';
+            noBtn.style.left = `${randomX}vw`;
+            noBtn.style.top = `${randomY}vh`;
+
+            acceptBtnSize += 0.1;
+            document.getElementById('acceptBtn').style.transform = `scale(${acceptBtnSize})`;
+        }
+
+        document.getElementById('noBtn').addEventListener('click', function() {
+            moveNoButton();
+        });
+
+        document.getElementById('acceptBtn').addEventListener('click', function() {
+            alert("Ya que aceptaste ponte en 4 mi reina hermosa 💖");
+        });
+
+        function showSection(sectionId) {
+            document.querySelectorAll('.hidden-section').forEach((section) => {
+                section.classList.add('hidden');
+            });
+
+            document.getElementById(sectionId).classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>

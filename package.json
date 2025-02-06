@@ -1,0 +1,19 @@
+{
+  "name": "14febrero",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@tailwindcss/vite": "^4.0.3",
+    "autoprefixer": "^10.4.20",
+    "flatpickr": "^4.6.13",
+    "postcss": "^8.5.1",
+    "tailwindcss": "^4.0.3"
+  }
+}
