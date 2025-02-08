@@ -20,10 +20,10 @@
 </head>
 <body class="bg-gradient-to-r from-pink-500 to-pink-900">
 
-    <div class="flex h-screen flex-col lg:flex-row">
+    <div class="flex h-screen">
         <!-- Sidebar -->
-        <div class="lg:w-64 w-full bg-white p-5 lg:block hidden" data-aos="fade-right" data-aos-duration="1000">
-            <h2 class="text-2xl font-bold text-center text-pink-500">Para mi reina hermosa, mi amorcito bonita 💖</h2>
+        <div class="w-64 bg-white p-5" data-aos="fade-right" data-aos-duration="1000">
+            <h2 class="text-2xl font-bold text-center text-pink-500">Mi San Valentín</h2>
             <ul class="mt-10 space-y-4">
                 <li><a href="#inicio" class="text-lg text-gray-700 hover:text-pink-500" onclick="showSection('inicio')">Inicio</a></li>
                 <li><a href="#sobre-mi" class="text-lg text-gray-700 hover:text-pink-500" onclick="showSection('sobre-mi')" id="sobreMiLink" style="pointer-events: none; opacity: 0.5;">Sobre mí</a></li>
@@ -33,7 +33,7 @@
         </div>
 
         <!-- Main Content -->
-        <div class="flex-1 p-5 lg:p-10">
+        <div class="flex-1 p-10">
             <!-- Sección de Inicio -->
             <section id="inicio" class="text-center" data-aos="fade-up" data-aos-duration="1500">
                 <h1 class="text-4xl font-extrabold text-white mb-5">¿Quieres ser mi San Valentín, mi amor?</h1>
@@ -59,21 +59,42 @@
             </section>
 
             <!-- Sección Galería -->
-            <section id="galeria" class="mt-20 text-center hidden-section" data-aos="fade-up" data-aos-duration="1500">
-                <h2 class="text-3xl font-bold text-white mb-5">Galería</h2>
-                <!-- Galería de imágenes con animación y adaptabilidad según pantalla -->
-                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 mb-5">
-                    <img src="images/Diciembre pipipi.png" alt="Imagen 1" class="rounded-full w-32 h-32 object-cover transition-transform duration-300 ease-in-out hover:scale-110 mx-auto">
-                    <img src="images/MiAmorcitoBonita.png" alt="Imagen 2" class="rounded-full w-32 h-32 object-cover transition-transform duration-300 ease-in-out hover:scale-110 mx-auto">
-                    <img src="images/Miamorcitobonitahermosabella.png" alt="Imagen 3" class="rounded-full w-32 h-32 object-cover transition-transform duration-300 ease-in-out hover:scale-110 mx-auto">
-                    <img src="images/uwu.png" alt="Imagen 4" class="rounded-full w-32 h-32 object-cover transition-transform duration-300 ease-in-out hover:scale-110 mx-auto">
-                    <img src="images/WA.png" alt="Imagen 5" class="rounded-full w-32 h-32 object-cover transition-transform duration-300 ease-in-out hover:scale-110 mx-auto">
-                    <img src="images/Miamorcito.jpg" alt="Imagen 6" class="rounded-full w-32 h-32 object-cover transition-transform duration-300 ease-in-out hover:scale-110 mx-auto">
-                    <img src="images/MiAmorcito.png" alt="Imagen 7" class="rounded-full w-32 h-32 object-cover transition-transform duration-300 ease-in-out hover:scale-110 mx-auto">
-                    <img src="images/Miniñitabonita.jpg" alt="Imagen 8" class="rounded-full w-32 h-32 object-cover transition-transform duration-300 ease-in-out hover:scale-110 mx-auto">
-                    <img src="images/1709443755879.jpg" alt="Imagen 9" class="rounded-full w-32 h-32 object-cover transition-transform duration-300 ease-in-out hover:scale-110 mx-auto">
-                </div>
-            </section>
+            <!-- Sección Galería -->
+<!-- Sección Galería -->
+<section id="galeria" class="mt-20 text-center hidden-section" data-aos="fade-up" data-aos-duration="1500">
+    <h2 class="text-3xl font-bold text-white mb-5">Galería</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-5">
+        <div>
+            <img src="images/Diciembre pipipi.png" alt="Imagen 1" class="rounded-full w-48 h-48 object-cover transition-transform duration-300 ease-in-out hover:scale-110 mx-auto">
+            <a href="images/Diciembre pipipi.png" download="Diciembre_pipipi.png">
+                <button class="bg-blue-500 text-white py-2 px-4 mt-2 rounded-lg hover:bg-blue-700 transition duration-300">
+                    Descargar
+                </button>
+            </a>
+        </div>
+        <div>
+            <img src="images/MiAmorcitoBonita.png" alt="Imagen 2" class="rounded-full w-48 h-48 object-cover transition-transform duration-300 ease-in-out hover:scale-110 mx-auto">
+            <a href="images/MiAmorcitoBonita.png" download="MiAmorcitoBonita.png">
+                <button class="bg-blue-500 text-white py-2 px-4 mt-2 rounded-lg hover:bg-blue-700 transition duration-300">
+                    Descargar
+                </button>
+            </a>
+        </div>
+        <div>
+            <img src="images/Miamorcitobonitahermosabella.png" alt="Imagen 3" class="rounded-full w-48 h-48 object-cover transition-transform duration-300 ease-in-out hover:scale-110 mx-auto">
+            <a href="images/Miamorcitobonitahermosabella.png" download="Miamorcitobonitahermosabella.png">
+                <button class="bg-blue-500 text-white py-2 px-4 mt-2 rounded-lg hover:bg-blue-700 transition duration-300">
+                    Descargar
+                </button>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+            
+            
+            
 
         </div>
     </div>
@@ -83,45 +104,81 @@
     <script>
         AOS.init();
 
-        let acceptBtnSize = 1;
+        let acceptBtnSize = 1; // Tamaño inicial del botón "Sí"
 
+        // Función para mover el botón "No" a una nueva posición
         function moveNoButton() {
             const messages = [
                 "Amor te quieres quedar sin novio?",
                 "Amor piensalo bien tienes tiempo todavia para decir que si mi vida no hagas esto mas dificil",
                 "De verdad me estas haciendo esto?",
-                "Ok esta bien respeto tu decision amor...",
+                "Ok esta bien respeto tu decision amor...", 
                 "Ya sabia desde un principio que no me querias y quieres tener al otro para que sea tu san valentin 😔"
             ];
             const randomMessage = messages[Math.floor(Math.random() * messages.length)];
             document.getElementById('noMessage').innerText = randomMessage;
 
-            const randomX = Math.random() * 70;
-            const randomY = Math.random() * 50;
+            // Mover el botón "No" a una posición aleatoria
+            const randomX = Math.random() * 70; // Movimiento horizontal
+            const randomY = Math.random() * 50; // Movimiento vertical
             const noBtn = document.getElementById('noBtn');
             noBtn.style.position = 'absolute';
             noBtn.style.left = `${randomX}vw`;
             noBtn.style.top = `${randomY}vh`;
 
-            acceptBtnSize += 0.1;
-            document.getElementById('acceptBtn').style.transform = `scale(${acceptBtnSize})`;
+
+            // Hacer más grande el botón "Sí"
+            acceptBtnSize += 0.1; // Aumentar el tamaño del botón "Sí"
+            document.getElementById('acceptBtn').style.transform = scale($`{acceptBtnSize}`); // Cambiar el tamaño
         }
 
+        // Cuando se hace clic en el botón "No"
         document.getElementById('noBtn').addEventListener('click', function() {
             moveNoButton();
         });
 
+        // Cuando se hace clic en el botón "Sí"
         document.getElementById('acceptBtn').addEventListener('click', function() {
-            alert("Ya que aceptaste ponte en 4 mi reina hermosa 💖");
+            alert('Yo sabía que terminarias aceptando mi amorcito bonita, hermosa, bella, preciosa 💖');
+            this.classList.add('bg-green-500');
+            this.textContent = 'Ya que aceptaste mi amor ahora ponte en 4 mi vida 💖';
+
+            // Ocultar la sección de inicio y mostrar los botones de las demás secciones
+            document.getElementById('inicio').classList.add('hidden-section');
+
+            // Desbloquear las secciones (botones de navegación)
+            document.getElementById('sobreMiLink').style.pointerEvents = 'auto';
+            document.getElementById('mensajeLink').style.pointerEvents = 'auto';
+            document.getElementById('galeriaLink').style.pointerEvents = 'auto';
+            document.getElementById('sobreMiLink').style.opacity = 1;
+            document.getElementById('mensajeLink').style.opacity = 1;
+            document.getElementById('galeriaLink').style.opacity = 1;
         });
 
+        // Función para mostrar las secciones
         function showSection(sectionId) {
-            document.querySelectorAll('.hidden-section').forEach((section) => {
-                section.classList.add('hidden');
+            // Ocultar todas las secciones
+            const sections = document.querySelectorAll('section');
+            sections.forEach(function(section) {
+                section.classList.add('hidden-section');
             });
 
-            document.getElementById(sectionId).classList.remove('hidden');
+            // Mostrar la sección seleccionada
+            const sectionToShow = document.getElementById(sectionId);
+            sectionToShow.classList.remove('hidden-section');
         }
+
+        function descargarImagen(url, nombreArchivo) {
+        const enlace = document.createElement('a');
+        enlace.href = url;
+        enlace.download = nombreArchivo;
+        document.body.appendChild(enlace);
+        enlace.click();
+        document.body.removeChild(enlace);
+    }
+
+        // Mostrar la sección de inicio al cargar la página
+        showSection('inicio');
     </script>
 </body>
 </html>
