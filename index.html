@@ -6,6 +6,8 @@
     <title>Mi San Valentín</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style2.css">
+
     <style>
         #noBtn {
             transition: all 0.5s ease;
@@ -22,11 +24,30 @@
 
     <div class="flex h-screen">
         <!-- Sidebar -->
-        <div class="w-64 bg-white p-5" data-aos="fade-right" data-aos-duration="1000">
-            <h2 class="text-2xl font-bold text-center text-pink-500">Mi San Valentín</h2>
+        <div id="sidebar" class="w-64 bg-white p-5" data-aos="fade-right" data-aos-duration="1000">
+            <h2 class="text-2xl font-bold text-center text-pink-500">Para mi amorcito bonita hermosa bella 💖</h2>
             <ul class="mt-10 space-y-4">
                 <li><a href="#inicio" class="text-lg text-gray-700 hover:text-pink-500" onclick="showSection('inicio')">Inicio</a></li>
-                <li><a href="#sobre-mi" class="text-lg text-gray-700 hover:text-pink-500" onclick="showSection('sobre-mi')" id="sobreMiLink" style="pointer-events: none; opacity: 0.5;">Sobre mí</a></li>
+                <li><a href="#sobre-nosotros" class="text-lg text-gray-700 hover:text-pink-500" onclick="showSection('sobre-nosotros')" id="sobreNosotrosLink" style="pointer-events: none; opacity: 0.5;">Sobre nosotros</a></li>
+                <li><a href="#mensaje" class="text-lg text-gray-700 hover:text-pink-500" onclick="showSection('mensaje')" id="mensajeLink" style="pointer-events: none; opacity: 0.5;">Mensaje Especial</a></li>
+                <li><a href="#galeria" class="text-lg text-gray-700 hover:text-pink-500" onclick="showSection('galeria')" id="galeriaLink" style="pointer-events: none; opacity: 0.5;">Galería</a></li>
+            </ul>
+        </div>
+        
+
+        <!-- Button for mobile sidebar toggle -->
+        <div class="lg:hidden p-5">
+            <button id="sidebarToggle" class="text-white bg-pink-500 p-3 rounded-md">
+                ☰
+            </button>
+        </div>
+
+        <!-- Sidebar Mobile -->
+        <div id="sidebarMobile" class="fixed top-0 left-0 w-64 h-full bg-white p-5 hidden lg:hidden" data-aos="fade-right" data-aos-duration="1000">
+            <h2 class="text-2xl font-bold text-center text-pink-500">Para mi amorcito bonita hermosa bella 💖</h2>
+            <ul class="mt-10 space-y-4">
+                <li><a href="#inicio" class="text-lg text-gray-700 hover:text-pink-500" onclick="showSection('inicio')">Inicio</a></li>
+                <li><a href="#sobre-nosotros" class="text-lg text-gray-700 hover:text-pink-500" onclick="showSection('sobre-nosotros')" id="sobreNosotrosLink" style="pointer-events: none; opacity: 0.5;">Sobre Nosotros</a></li>
                 <li><a href="#mensaje" class="text-lg text-gray-700 hover:text-pink-500" onclick="showSection('mensaje')" id="mensajeLink" style="pointer-events: none; opacity: 0.5;">Mensaje Especial</a></li>
                 <li><a href="#galeria" class="text-lg text-gray-700 hover:text-pink-500" onclick="showSection('galeria')" id="galeriaLink" style="pointer-events: none; opacity: 0.5;">Galería</a></li>
             </ul>
@@ -37,7 +58,7 @@
             <!-- Sección de Inicio -->
             <section id="inicio" class="text-center" data-aos="fade-up" data-aos-duration="1500">
                 <h1 class="text-4xl font-extrabold text-white mb-5">¿Quieres ser mi San Valentín, mi amor?</h1>
-                <p class="text-xl text-white mb-5">De hecho ni deberia preguntar o quieres ser San Valentín del otro? 💖</p>
+                <p class="text-xl text-white mb-5">De hecho ni deberia preguntar o quieres ser San Valentín del otro?</p>
                 <div class="flex justify-center mb-5">
                     <img class="rounded-full w-32 h-32 object-cover" src="images/ola.png" alt="Imagen de ola">
                 </div>
@@ -46,28 +67,62 @@
                 <p id="noMessage" class="text-white mt-5"></p>
             </section>
 
-            <!-- Sección Sobre mí -->
-            <section id="sobre-mi" class="mt-20 text-center hidden-section" data-aos="fade-up" data-aos-duration="1500">
-                <h2 class="text-3xl font-bold text-white mb-5">Sobre mí</h2>
-                <p class="text-xl text-white">Soy alguien que te quiere mucho y quiero que este San Valentín sea algo especial para nosotros. 💖</p>
+            <!-- Sección Sobre nosotros -->
+            <section id="sobre-nosotros" class="mt-20 text-center hidden-section" data-aos="fade-up" data-aos-duration="1500">
+                <h2 class="text-3xl font-bold text-white mb-5">Sobre Nosotros</h2>
+
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                    <div>
+                        <video id="video1" class="w-full h-100 rounded-lg shadow-lg" controls onended="unlockNext(2)">
+                            <source src="gato-1.mp4" type="video/mp4">
+                            Tu navegador no soporta el video.
+                        </video>
+                        <p class="mt-3 text-lg font-semibold text-white">NOSOTROS DURMIENDO</p>
+                    </div>
+                
+                    <div>
+                        <video id="video2" class="w-full h-auto opacity-50 pointer-events-none rounded-lg shadow-lg" controls onended="unlockNext(3)" disabled>
+                            <source src="gato2.mp4" type="video/mp4">
+                            Tu navegador no soporta el video.
+                        </video>
+                        <p class="mt-3 text-lg font-semibold text-gray-400">NOSOTROS ALMORZANDO</p>
+                    </div>
+                
+                    <div>
+                        <video id="video3" class="w-full h-auto opacity-50 pointer-events-none rounded-lg shadow-lg" controls disabled>
+                            <source src="gato3.mp4" type="video/mp4">
+                            Tu navegador no soporta el video.
+                        </video>
+                        <p class="mt-3 text-lg font-semibold text-gray-400">NOSOTROS DESPERTANDO</p>
+                    </div>
+                </div>
+    
+
+                <div class="button-container">
+                    <a href="Foto.html" class="styled-button">????????????</a>
+                </div>
+                
             </section>
 
             <!-- Sección Mensaje Especial -->
             <section id="mensaje" class="mt-20 text-center hidden-section" data-aos="fade-up" data-aos-duration="1500">
                 <h2 class="text-3xl font-bold text-white mb-5">Mensaje Especial</h2>
-                <p class="text-xl text-white">Este 14 de febrero quiero que lo celebremos juntos, compartiendo momentos increíbles. Te quiero mucho. 😘</p>
+                <p class="text-xl text-white mb-5">Mi amor bonita, hermosa, bella, preciosa no sabes cuanto te amo mi reina hermosa, quiero decirte que gracias una vez más por poder aceptar y tenerte como mi 14 de febrero ya sé que paso un día pero nunca es tarde como para darte un regalito o hacerte una sorpresita mi amor, espero y te haya gustado mucho lo que te hice se que no es mucho y nunca es suficiente lo que te voy a dar porque tu te mereces todo el mundo mi amor y no me voy a cansar de repetirlo porque eres mi futura esposa y con la que quiero pasar el resto de mis días mi amor 😘</p>
+                <img src="images/bd0a97088a1a8f2ab9352c16318e7574.jpg" class="container mx-auto w-1/4" alt="Imagen especial">
             </section>
+            
+            
 
             <!-- Sección Galería -->
-            <!-- Sección Galería -->
-<!-- Sección Galería -->
 <section id="galeria" class="mt-20 text-center hidden-section" data-aos="fade-up" data-aos-duration="1500">
     <h2 class="text-3xl font-bold text-white mb-5">Galería</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-5">
+    <!-- Galería de imágenes con animación y 3 imágenes por fila -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-5">
         <div>
             <img src="images/Diciembre pipipi.png" alt="Imagen 1" class="rounded-full w-48 h-48 object-cover transition-transform duration-300 ease-in-out hover:scale-110 mx-auto">
             <a href="images/Diciembre pipipi.png" download="Diciembre_pipipi.png">
-                <button class="bg-blue-500 text-white py-2 px-4 mt-2 rounded-lg hover:bg-blue-700 transition duration-300">
+                <button class="bg-gradient-to-r from-pink-500 to-pink-700 text-white py-3 px-6 mt-4 rounded-lg shadow-lg hover:scale-105 hover:from-pink-600 hover:to-pink-800 transition-all duration-300 transform">
                     Descargar
                 </button>
             </a>
@@ -75,7 +130,7 @@
         <div>
             <img src="images/MiAmorcitoBonita.png" alt="Imagen 2" class="rounded-full w-48 h-48 object-cover transition-transform duration-300 ease-in-out hover:scale-110 mx-auto">
             <a href="images/MiAmorcitoBonita.png" download="MiAmorcitoBonita.png">
-                <button class="bg-blue-500 text-white py-2 px-4 mt-2 rounded-lg hover:bg-blue-700 transition duration-300">
+                <button class="bg-gradient-to-r from-pink-500 to-pink-700 text-white py-3 px-6 mt-4 rounded-lg shadow-lg hover:scale-105 hover:from-pink-600 hover:to-pink-800 transition-all duration-300 transform">
                     Descargar
                 </button>
             </a>
@@ -83,14 +138,53 @@
         <div>
             <img src="images/Miamorcitobonitahermosabella.png" alt="Imagen 3" class="rounded-full w-48 h-48 object-cover transition-transform duration-300 ease-in-out hover:scale-110 mx-auto">
             <a href="images/Miamorcitobonitahermosabella.png" download="Miamorcitobonitahermosabella.png">
-                <button class="bg-blue-500 text-white py-2 px-4 mt-2 rounded-lg hover:bg-blue-700 transition duration-300">
+                <button class="bg-gradient-to-r from-pink-500 to-pink-700 text-white py-3 px-6 mt-4 rounded-lg shadow-lg hover:scale-105 hover:from-pink-600 hover:to-pink-800 transition-all duration-300 transform">
+                    Descargar
+                </button>
+            </a>
+        </div>
+        <div>
+            <img src="images/uwu.png" alt="Imagen 1" class="rounded-full w-48 h-48 object-cover transition-transform duration-300 ease-in-out hover:scale-110 mx-auto">
+            <a href="images/uwu.png" download="uwu.png">
+                <button class="bg-gradient-to-r from-pink-500 to-pink-700 text-white py-3 px-6 mt-4 rounded-lg shadow-lg hover:scale-105 hover:from-pink-600 hover:to-pink-800 transition-all duration-300 transform">
+                    Descargar
+                </button>
+            </a>
+        </div>
+        <div>
+            <img src="images/WA.png" alt="Imagen 2" class="rounded-full w-48 h-48 object-cover transition-transform duration-300 ease-in-out hover:scale-110 mx-auto">
+            <a href="images/WA.png" download="WA.png">
+                <button class="bg-gradient-to-r from-pink-500 to-pink-700 text-white py-3 px-6 mt-4 rounded-lg shadow-lg hover:scale-105 hover:from-pink-600 hover:to-pink-800 transition-all duration-300 transform">
+                    Descargar
+                </button>
+            </a>
+        </div>
+        <div>
+            <img src="images/Miamorcito.jpg" alt="Imagen 3" class="rounded-full w-48 h-48 object-cover transition-transform duration-300 ease-in-out hover:scale-110 mx-auto">
+            <a href="images/Miamorcito.jpg" download="Miamorcito.jpg">
+                <button class="bg-gradient-to-r from-pink-500 to-pink-700 text-white py-3 px-6 mt-4 rounded-lg shadow-lg hover:scale-105 hover:from-pink-600 hover:to-pink-800 transition-all duration-300 transform">
+                    Descargar
+                </button>
+            </a>
+        </div>
+        <div>
+            <img src="images/MiAmorcito.png" alt="Imagen 1" class="rounded-full w-48 h-48 object-cover transition-transform duration-300 ease-in-out hover:scale-110 mx-auto">
+            <a href="images/MiAmorcito.png" download="MiAmorcito.png">
+                <button class="bg-gradient-to-r from-pink-500 to-pink-700 text-white py-3 px-6 mt-4 rounded-lg shadow-lg hover:scale-105 hover:from-pink-600 hover:to-pink-800 transition-all duration-300 transform">
+                    Descargar
+                </button>
+            </a>
+        </div>
+        <div>
+            <img src="images/Miniñitabonita.jpg" alt="Imagen 2" class="rounded-full w-48 h-48 object-cover transition-transform duration-300 ease-in-out hover:scale-110 mx-auto">
+            <a href="images/Miniñitabonita.jpg" download="Miniñitabonita.jpg">
+                <button class="bg-gradient-to-r from-pink-500 to-pink-700 text-white py-3 px-6 mt-4 rounded-lg shadow-lg hover:scale-105 hover:from-pink-600 hover:to-pink-800 transition-all duration-300 transform">
                     Descargar
                 </button>
             </a>
         </div>
     </div>
 </section>
-
 
             
             
@@ -129,7 +223,7 @@
 
             // Hacer más grande el botón "Sí"
             acceptBtnSize += 0.1; // Aumentar el tamaño del botón "Sí"
-            document.getElementById('acceptBtn').style.transform = scale($`{acceptBtnSize}`); // Cambiar el tamaño
+            document.getElementById('acceptBtn').style.transform = `scale(${acceptBtnSize})`; // Cambiar el tamaño
         }
 
         // Cuando se hace clic en el botón "No"
@@ -147,13 +241,28 @@
             document.getElementById('inicio').classList.add('hidden-section');
 
             // Desbloquear las secciones (botones de navegación)
-            document.getElementById('sobreMiLink').style.pointerEvents = 'auto';
+            document.getElementById('sobreNosotrosLink').style.pointerEvents = 'auto';
             document.getElementById('mensajeLink').style.pointerEvents = 'auto';
             document.getElementById('galeriaLink').style.pointerEvents = 'auto';
-            document.getElementById('sobreMiLink').style.opacity = 1;
+            document.getElementById('sobreNosotrosLink').style.opacity = 1;
             document.getElementById('mensajeLink').style.opacity = 1;
             document.getElementById('galeriaLink').style.opacity = 1;
         });
+
+        function unlockNext(videoNumber) {
+        let nextVideo = document.getElementById(`video${videoNumber}`);
+        if (nextVideo) {
+            nextVideo.classList.remove("opacity-50", "pointer-events-none");
+            nextVideo.removeAttribute("disabled");
+
+            // Cambia el color del texto al desbloquear el video
+            let text = nextVideo.nextElementSibling;
+            if (text) {
+                text.classList.remove("text-gray-400");
+                text.classList.add("text-white");
+            }
+        }
+    }
 
         // Función para mostrar las secciones
         function showSection(sectionId) {
@@ -168,17 +277,14 @@
             sectionToShow.classList.remove('hidden-section');
         }
 
-        function descargarImagen(url, nombreArchivo) {
-        const enlace = document.createElement('a');
-        enlace.href = url;
-        enlace.download = nombreArchivo;
-        document.body.appendChild(enlace);
-        enlace.click();
-        document.body.removeChild(enlace);
-    }
-
         // Mostrar la sección de inicio al cargar la página
         showSection('inicio');
+
+        // Función para alternar el sidebar en móviles
+        document.getElementById('sidebarToggle').addEventListener('click', function() {
+            const sidebarMobile = document.getElementById('sidebarMobile');
+            sidebarMobile.classList.toggle('hidden');
+        });
     </script>
 </body>
 </html>

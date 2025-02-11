@@ -1,0 +1,24 @@
+.button-container {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente si el contenedor tiene altura */
+    height: 150px; /* Opcional: Centra en toda la pantalla */
+}
+
+.styled-button {
+    display: inline-block;
+    background-color: #ff4d4d; /* Rojo vibrante */
+    color: white;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.styled-button:hover {
+    background-color: #ff1a1a; /* Rojo más oscuro en hover */
+    transform: scale(1.1); /* Efecto de agrandamiento */
+}
